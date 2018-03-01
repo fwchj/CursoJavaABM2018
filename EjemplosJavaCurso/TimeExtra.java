@@ -16,7 +16,7 @@ public class TimeExtra {
 		long totalMilliseconds = System.currentTimeMillis();	
 		long seconds = totalMilliseconds / 1000 % 60;
 		long minutes = totalMilliseconds / 1000 / 60 % 60;
-		long hours = totalMilliseconds / 1000 / 60 / 60 % 24;
+		long hours = totalMilliseconds / (1000 * 60 * 60) % 24;
 		
 		// Adapt the hours
 		hours +=diff;	// Adding the difference to match the time zone
@@ -39,3 +39,12 @@ public class TimeExtra {
 	}
 
 }
+
+
+
+
+
+
+
+
+
