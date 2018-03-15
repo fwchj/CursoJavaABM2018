@@ -1,19 +1,29 @@
 package claseJava;
 
+import java.util.ArrayList;
+
 public class Student {
 	// Variables de instancia
-	private String name;
-	private String program;
+	protected final String name; // FIXME: discutir con el equipo si el final está bien
+	String program;
+	private int ID;
+	public ArrayList<Student> amigos = new ArrayList<Student>();
+	
+	// Variable static (o de clase)
+	public static int numberOfStudents = 0;
 	
 	// Constructor
 	public Student(String nombre, String programa){
 		this.name = nombre;
 		this.program = programa;
+		this.ID = ++Student.numberOfStudents;
 	}
 	
 	// Metodos
 	public void describe(){
-		System.out.printf("Hola, soy %s del programa %s\n",this.name,this.program);
+		// TODO : hay que poner más información sobre el individuo
+		System.out.printf("    Hola, soy %s del programa %s\n",this.name,this.program);
+		
 	}
 	
 	// Método para regresar el nombre de la persona
@@ -24,6 +34,15 @@ public class Student {
 	public String getProgram(){
 		return this.program;
 	}
+	// Método para regresar el ID del individuo
+	public int getID() {
+		return this.ID;
+	}
+	
+	public static void sum(int n1, int n2){
+		System.out.printf("%s + %s = %s\n", n1,n2,n1+n2);
+	}
+	
 	
 	
 	
