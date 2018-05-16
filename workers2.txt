@@ -1,0 +1,5 @@
+Name,FamilyName,Age,Female,GrossSalary
+Jane,Parker,42,TRUE,41000.10
+John,Miller,45,FALSE,40500.00
+Patrick,Johnson,29,FALSE,28500.00
+Patricio,Sánchez Amador,31,FALSE,34503.00
